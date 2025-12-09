@@ -22,6 +22,11 @@ export function addPlayer(playerData) {
   players.push(newPlayer);
   return newPlayer;
 }
+export function removePlayer(id) {
+  const indexToRemove = players.findIndex((player) => player.id === id);
+  console.log(indexToRemove);
+  return players.splice(indexToRemove, 1);
+}
 
 addPlayer({
   name: "Uri",
@@ -30,4 +35,5 @@ addPlayer({
   nationality: "Israeli",
 });
 
+removePlayer(4);
 console.log(players);
