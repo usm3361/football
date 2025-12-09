@@ -9,7 +9,6 @@ export const findPlayerById = (id) => {
 };
 
 export function addPlayer(playerData) {
- 
   const newPlayer = {
     id: players.length + 1,
     name: playerData.name,
@@ -18,18 +17,17 @@ export function addPlayer(playerData) {
     goals: 0,
     assists: 0,
     matches: 0,
-    nationality: playerData.nationality
-    }
-    players.push(newPlayer)
-    return newPlayer
+    nationality: playerData.nationality,
+  };
+  players.push(newPlayer);
+  return newPlayer;
 }
 
-
 addPlayer({
-    name: "Uri",
-    position: "GoalKeeper",
-    age: 30,
-    nationality: "Israeli"
-})
-    
-console.log(players)
+  name: "Uri",
+  position: "GoalKeeper",
+  age: 30,
+  nationality: "Israeli",
+});
+
+console.log(players);
